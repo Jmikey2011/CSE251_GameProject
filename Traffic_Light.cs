@@ -43,4 +43,6 @@ public class Traffic : MonoBehaviour{
 void Update{
 }// end Update
 
-void setMat(Light,Light,Light,Light)
+void setMat(Light,Light,Light,Light){
+     
+}// setMat
