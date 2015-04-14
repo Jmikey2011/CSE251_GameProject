@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Light_Test : MonoBehaviour {
 
+
+
 	static public float timeLimitYellow = 5f;
 	static public float timeLimitGreen = 10f;
 	static public float timeLimitRed = 15f;
@@ -14,9 +16,9 @@ public class Light_Test : MonoBehaviour {
 	public GameObject greenLight;
 	public GameObject yellowLight;
 	public GameObject redLight;
-
+	
 	private float startTime;
-
+	
 	// Use this for initialization
 	void Start (){
 		
@@ -24,7 +26,7 @@ public class Light_Test : MonoBehaviour {
 		SetLight ();
 		
 	}// end Start
-
+	
 	// Update is called once per frame
 	// Sets the currentTime and calls SetLight function
 	void Update ()
@@ -36,7 +38,7 @@ public class Light_Test : MonoBehaviour {
 			
 			if (currentTime - startTime > timeLimitRed) {
 				startTime = currentTime;
-				Debug.Log ("Time: " + startTime);
+				//Debug.Log ("Time: " + startTime);
 				SetLight ();
 			}// end if 
 			return;	
@@ -45,23 +47,23 @@ public class Light_Test : MonoBehaviour {
 			
 			if (currentTime - startTime > timeLimitGreen) {
 				startTime = currentTime;
-				Debug.Log ("Time: " + startTime);
+				//Debug.Log ("Time: " + startTime);
 				SetLight ();
 			}// end if 
 			return;
-
+			
 		case 2:
 			
 			if (currentTime - startTime > timeLimitYellow) {
 				startTime = currentTime;
-				Debug.Log ("Time:  " + startTime);
+				//Debug.Log ("Time:  " + startTime);
 				SetLight ();
 			}// end if
 			return;
-		
+			
 		}// end switch
 	}// end Update
-
+	
 	// Turns on the specified light for the current frame
 	void SetLight ()
 	{	
@@ -74,26 +76,24 @@ public class Light_Test : MonoBehaviour {
 			
 		case 0:
 			lightCounter++;
-			Debug.Log ("Trying light 0");
+			//Debug.Log ("Trying light 0");
 			greenLight.SetActive (true);
 			return;
-	
+			
 		case 1:
 			lightCounter++;
-			Debug.Log ("Trying light 1");
+			//Debug.Log ("Trying light 1");
 			yellowLight.SetActive (true);
 			return;
-		
+			
 		case 2: 
 			lightCounter = 0;
-			Debug.Log ("Trying light 2");
+			//Debug.Log ("Trying light 2");
 			redLight.SetActive (true);
 			return;
 			
 		}// end switch
-		
+
 	}// end  SetLight
 
 }// end Light_Test
-
-
